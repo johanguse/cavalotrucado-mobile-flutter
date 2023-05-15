@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "659176071823",
+    "project_id": "cavalo-trucado-firebase",
+    "storage_bucket": "cavalo-trucado-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659176071823:android:923e84e964e437cb5fc6fa",
+        "android_client_info": {
+          "package_name": "dev.johanguse.cavalo_trucado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659176071823-oak0bt4ovgp00dt6a75huhv6p9tlpmt9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPCOTJZuLZ6tnr4QiHhCybIpwX3qMRzW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659176071823-oak0bt4ovgp00dt6a75huhv6p9tlpmt9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
