@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cavalo_trucado/pages/Login/login.dart';
+import 'package:cavalo_trucado/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:cavalo_trucado/one_signal.dart';
 

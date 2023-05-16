@@ -1,7 +1,29 @@
-import 'package:flutter/material.dart';
-import 'package:cavalo_trucado/pages/Splash/splash.dart';
+import 'dart:async';
 
-void main() {
+import 'package:cavalo_trucado/firebase_options.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:cavalo_trucado/screens/splash/splash.dart';
+import 'package:flutter/services.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  _lockOrientation();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  // Crashlytics Setup
+  await Firebase.initializeApp();
+  await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+  Function originalOnError = FlutterError.onError as Function;
+  FlutterError.onError = (FlutterErrorDetails errorDetails) async {
+    await FirebaseCrashlytics.instance.recordFlutterError(errorDetails);
+    originalOnError(errorDetails);
+  };
+
+  
   runApp(const OnAccess());
 }
 
@@ -20,4 +42,11 @@ class _OnAccessState extends State<OnAccess> {
       debugShowCheckedModeBanner: false,
     );
   }
+}
+
+void _lockOrientation() {
+  SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
+  ]);
 }

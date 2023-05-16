@@ -9,12 +9,12 @@ class AppOneSignalController {
       OneSignal.shared
           .promptUserForPushNotificationPermission(fallbackToSettings: false)
           .then((accepted) async {
-        print('Cliente aceitou permissão: $accepted');
+        log('Cliente aceitou permissão: $accepted');
       });
     }
     catch(e,s){
-      print(e);
-      print(s);
+      log(e as String);
+      log(s as String);
       log("Erro ao configurar OneSignal");
     }
   }

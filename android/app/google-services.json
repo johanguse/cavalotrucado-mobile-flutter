@@ -29,6 +29,13 @@
             {
               "client_id": "659176071823-oak0bt4ovgp00dt6a75huhv6p9tlpmt9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "659176071823-h1d40t9n28jm2ad88qkr7v1qb7p9u8v3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.johanguse.cavaloTrucado"
+              }
             }
           ]
         }
