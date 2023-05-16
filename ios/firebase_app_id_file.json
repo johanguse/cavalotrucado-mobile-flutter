@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:659176071823:ios:a7292d296170a3155fc6fa",
-  "FIREBASE_PROJECT_ID": "cavalo-trucado-firebase",
-  "GCM_SENDER_ID": "659176071823"
+  "GOOGLE_APP_ID": "1:613417430493:ios:0ba64f144a28cc50bc5a34",
+  "FIREBASE_PROJECT_ID": "cavalo-trucado-prod",
+  "GCM_SENDER_ID": "613417430493"
 }

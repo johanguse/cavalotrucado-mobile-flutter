@@ -50,20 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBPCOTJZuLZ6tnr4QiHhCybIpwX3qMRzW0',
-    appId: '1:659176071823:android:923e84e964e437cb5fc6fa',
-    messagingSenderId: '659176071823',
-    projectId: 'cavalo-trucado-firebase',
-    storageBucket: 'cavalo-trucado-firebase.appspot.com',
+    apiKey: 'AIzaSyAYRnN3McLgatDn6uENvRsnnMfoMJR2xp4',
+    appId: '1:613417430493:android:fafc6abe75eee5bfbc5a34',
+    messagingSenderId: '613417430493',
+    projectId: 'cavalo-trucado-prod',
+    storageBucket: 'cavalo-trucado-prod.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCIfb4WxtOhHwLWNHoLn3UH69A17Sc2nME',
-    appId: '1:659176071823:ios:a7292d296170a3155fc6fa',
-    messagingSenderId: '659176071823',
-    projectId: 'cavalo-trucado-firebase',
-    storageBucket: 'cavalo-trucado-firebase.appspot.com',
-    iosClientId: '659176071823-h1d40t9n28jm2ad88qkr7v1qb7p9u8v3.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDIGYIUHzqyc8zQAPivhc84eC7xWCLiTOM',
+    appId: '1:613417430493:ios:0ba64f144a28cc50bc5a34',
+    messagingSenderId: '613417430493',
+    projectId: 'cavalo-trucado-prod',
+    storageBucket: 'cavalo-trucado-prod.appspot.com',
+    iosClientId: '613417430493-e2sp7ki713c7neh339gfd7lcesej4ber.apps.googleusercontent.com',
     iosBundleId: 'dev.johanguse.cavaloTrucado',
   );
 }

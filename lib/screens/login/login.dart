@@ -48,8 +48,7 @@ class _LoginState extends State<Login> {
                               height: 10 * 3,
                             ),
                             const Padding(
-                              padding: EdgeInsets.only(
-                                  left: 20.0, bottom: 3.5),
+                              padding: EdgeInsets.only(left: 20.0, bottom: 3.5),
                               child: Text("CPF",
                                   style: TextStyle(
                                       fontSize: 20, color: Colors.black)),
@@ -130,8 +129,8 @@ class _LoginState extends State<Login> {
                                   SizedBox(
                                     height: 56,
                                     child: ElevatedButton(
-                                      onPressed: _open,
-                                      child: _title(),
+                                      onPressed: () => throw Exception(),
+                                      child: const Text("Throw Test Exception"),
                                     ),
                                   ),
                                   const SizedBox(

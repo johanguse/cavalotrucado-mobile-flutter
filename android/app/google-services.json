@@ -1,37 +1,37 @@
 {
   "project_info": {
-    "project_number": "659176071823",
-    "project_id": "cavalo-trucado-firebase",
-    "storage_bucket": "cavalo-trucado-firebase.appspot.com"
+    "project_number": "613417430493",
+    "project_id": "cavalo-trucado-prod",
+    "storage_bucket": "cavalo-trucado-prod.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:659176071823:android:923e84e964e437cb5fc6fa",
+        "mobilesdk_app_id": "1:613417430493:android:fafc6abe75eee5bfbc5a34",
         "android_client_info": {
           "package_name": "dev.johanguse.cavalo_trucado"
         }
       },
       "oauth_client": [
         {
-          "client_id": "659176071823-oak0bt4ovgp00dt6a75huhv6p9tlpmt9.apps.googleusercontent.com",
+          "client_id": "613417430493-omsr3siu80p8cmkqtaq58r0mnu5d901d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBPCOTJZuLZ6tnr4QiHhCybIpwX3qMRzW0"
+          "current_key": "AIzaSyAYRnN3McLgatDn6uENvRsnnMfoMJR2xp4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "659176071823-oak0bt4ovgp00dt6a75huhv6p9tlpmt9.apps.googleusercontent.com",
+              "client_id": "613417430493-omsr3siu80p8cmkqtaq58r0mnu5d901d.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "659176071823-h1d40t9n28jm2ad88qkr7v1qb7p9u8v3.apps.googleusercontent.com",
+              "client_id": "613417430493-e2sp7ki713c7neh339gfd7lcesej4ber.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "dev.johanguse.cavaloTrucado"
