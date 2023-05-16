@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>659176071823-h1d40t9n28jm2ad88qkr7v1qb7p9u8v3.apps.googleusercontent.com</string>
+	<string>613417430493-e2sp7ki713c7neh339gfd7lcesej4ber.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.659176071823-h1d40t9n28jm2ad88qkr7v1qb7p9u8v3</string>
+	<string>com.googleusercontent.apps.613417430493-e2sp7ki713c7neh339gfd7lcesej4ber</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCIfb4WxtOhHwLWNHoLn3UH69A17Sc2nME</string>
+	<string>AIzaSyDIGYIUHzqyc8zQAPivhc84eC7xWCLiTOM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>659176071823</string>
+	<string>613417430493</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>dev.johanguse.cavaloTrucado</string>
 	<key>PROJECT_ID</key>
-	<string>cavalo-trucado-firebase</string>
+	<string>cavalo-trucado-prod</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cavalo-trucado-firebase.appspot.com</string>
+	<string>cavalo-trucado-prod.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:659176071823:ios:a7292d296170a3155fc6fa</string>
+	<string>1:613417430493:ios:0ba64f144a28cc50bc5a34</string>
 </dict>
 </plist>
