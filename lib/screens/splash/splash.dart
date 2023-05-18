@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:cavalo_trucado/screens/login/login.dart';
+import 'package:cavalo_trucado/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:cavalo_trucado/one_signal.dart';
 
@@ -25,7 +25,7 @@ class _SplashState extends State<Splash> {
   timer() {
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Login()));
+          context, MaterialPageRoute(builder: (context) => const Home()));
     });
   }
 
