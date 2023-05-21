@@ -3,9 +3,9 @@ import 'package:cavalo_trucado/utils/models/brand_model.dart';
 import 'package:cavalo_trucado/theme/color.dart';
 
 class CardBrand extends StatelessWidget {
-  Brand brand;
-  VoidCallback onTapItem;
-  CardBrand({Key? key, required this.brand, required this.onTapItem}) : super(key: key);
+  final Brand brand;
+  final VoidCallback onTapItem;
+  const CardBrand({Key? key, required this.brand, required this.onTapItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

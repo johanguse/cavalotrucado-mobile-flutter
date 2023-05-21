@@ -4,8 +4,8 @@ import 'dart:math' as math;
 import 'package:cavalo_trucado/theme/color.dart';
 
 class CardSoldVehicle extends StatelessWidget {
-  Vehicle vehicle;
-  CardSoldVehicle({Key? key, required this.vehicle}) : super(key: key);
+  final Vehicle vehicle;
+  const CardSoldVehicle({Key? key, required this.vehicle}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

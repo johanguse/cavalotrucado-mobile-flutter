@@ -1,3 +1,4 @@
+import 'package:cavalo_trucado/utils/analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:cavalo_trucado/utils/models/vehicle_model.dart';
 import 'package:cavalo_trucado/utils/api_service.dart';
@@ -27,6 +28,16 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     _getData();
+    AnalyticsService.observer.analytics.setCurrentScreen(screenName: "Home");
+  }
+
+  Future _sendAnalytics(String slug) async {
+    await AnalyticsService.observer.analytics.logEvent(
+      name: 'truck_detail',
+      parameters: <String, dynamic>{
+        'slug': slug,
+      },
+    );
   }
 
   void _getData() async {
@@ -36,9 +47,17 @@ class _HomeState extends State<Home> {
     Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
   }
 
-  _getTruckBySlug(String slug) async {
+  Future<void> _navigateToDetailPage(BuildContext context, String slug) async {
     _dataModel = (await ApiService().getTruckBySlug(slug))!;
-    Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
+    await Future.delayed(const Duration(seconds: 1));
+    setState(() {});
+
+    await _sendAnalytics(slug);
+
+    Navigator.pushNamed(context, '/detail', arguments: {
+      'dataModel': _dataModel,
+      'soldTruck': _soldTrucksModel,
+    });
   }
 
   Future refresh() async {
@@ -182,16 +201,9 @@ class _HomeState extends State<Home> {
                                     const EdgeInsets.fromLTRB(0, 10, 0, 10),
                                 child: CardVehicle(
                                   vehicle: _vehicleModel![index],
-                                  onTapItem: () async {
-                                    await _getTruckBySlug(
+                                  onTapItem: () {
+                                    _navigateToDetailPage(context,
                                         _vehicleModel![index].slug.toString());
-                                    if (_dataModel != null) {
-                                      Navigator.pushNamed(context, "/detail",
-                                          arguments: {
-                                            'dataModel': _dataModel!,
-                                            'soldTruck': _soldTrucksModel
-                                          });
-                                    }
                                   },
                                 ));
                           }),

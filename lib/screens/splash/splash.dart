@@ -1,20 +1,23 @@
 import 'dart:async';
 import 'package:cavalo_trucado/screens/home/home.dart';
+import 'package:cavalo_trucado/utils/analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:cavalo_trucado/one_signal.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
   @override
-  _SplashState createState() => _SplashState();
+  SplashState createState() => SplashState();
 }
 
-class _SplashState extends State<Splash> {
+class SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
     timer();
     configurePush();
+    AnalyticsService.observer.analytics.setCurrentScreen(screenName: "Splash");
+
   }
 
   void configurePush(){

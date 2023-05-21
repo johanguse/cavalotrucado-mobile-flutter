@@ -3,10 +3,10 @@ import 'package:cavalo_trucado/utils/models/vehicle_model.dart';
 import 'package:cavalo_trucado/theme/color.dart';
 
 class CardVehicle extends StatelessWidget {
-  Vehicle vehicle;
-  VoidCallback onTapItem;
+  final Vehicle vehicle;
+  final VoidCallback onTapItem;
 
-  CardVehicle({Key? key, required this.vehicle, required this.onTapItem}) : super(key: key);
+  const CardVehicle({Key? key, required this.vehicle, required this.onTapItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

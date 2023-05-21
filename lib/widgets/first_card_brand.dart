@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cavalo_trucado/theme/color.dart';
 
 class FirstCardBrand extends StatelessWidget {
-  VoidCallback onTapItem;
-  FirstCardBrand({Key? key, required this.onTapItem}) : super(key: key);
+  final VoidCallback onTapItem;
+  const FirstCardBrand({Key? key, required this.onTapItem}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

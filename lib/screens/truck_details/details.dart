@@ -3,23 +3,34 @@ import 'package:cavalo_trucado/utils/models/vehicle_model.dart';
 import 'package:cavalo_trucado/theme/color.dart';
 import 'package:cavalo_trucado/utils/models/data_model.dart';
 import 'package:cavalo_trucado/widgets/card_sold_vehicle.dart';
+import 'package:cavalo_trucado/utils/analytics.dart';
 
 class DetailScreen extends StatefulWidget {
-  Data data;
-  List<Vehicle> vehicle;
-  DetailScreen(this.data, this.vehicle, {super.key});
+  final Data data;
+  final List<Vehicle> vehicle;
+  const DetailScreen(this.data, this.vehicle, {super.key});
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  @override
+  void initState() {
+    super.initState();
+    final modelName = widget.data.vehicleModelName.toString();
+    final brand = widget.data.brand;
+    AnalyticsService.observer.analytics.setCurrentScreen(screenName: '$modelName $brand - Detail');
+  }
+
   String imageMainPhoto = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 1,
+        shadowColor: AppColor.colorShadow,
         backgroundColor: AppColor.white,
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,

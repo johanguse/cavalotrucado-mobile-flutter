@@ -6,7 +6,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:cavalo_trucado/utils/route_generator.dart';
 import 'package:cavalo_trucado/screens/splash/splash.dart';
-import 'package:cavalo_trucado/screens/home/home.dart';
 import 'package:flutter/services.dart';
 import 'firebase_options.dart';
 
