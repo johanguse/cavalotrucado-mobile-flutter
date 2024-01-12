@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "mobile_app dev",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": ["--dart-define-from-file=.environments/dev.json"]
+    },
+    {
+      "name": "mobile_app staging",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": ["--dart-define-from-file=.environments/staging.json"]
+    },
+    {
+      "name": "mobile_app prod",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": ["--dart-define-from-file=.environments/prod.json"]
+    },
+    {
+      "name": "mobile_app testing",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": ["--dart-define-from-file=.environments/testing.json"]
+    }
+  ]
+}
