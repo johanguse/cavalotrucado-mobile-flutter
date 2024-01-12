@@ -4,6 +4,8 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
+import 'env.dart';
+
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
 /// Example:
@@ -50,20 +52,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAYRnN3McLgatDn6uENvRsnnMfoMJR2xp4',
-    appId: '1:613417430493:android:fafc6abe75eee5bfbc5a34',
-    messagingSenderId: '613417430493',
-    projectId: 'cavalo-trucado-prod',
-    storageBucket: 'cavalo-trucado-prod.appspot.com',
+    apiKey: Env.firebaseAndroidApiKey,
+    appId: Env.firebaseAndroidAppId,
+    messagingSenderId: Env.firebaseMessagingSenderId,
+    projectId: Env.firebaseProjectId,
+    storageBucket: Env.firebaseStorageBucket,
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDIGYIUHzqyc8zQAPivhc84eC7xWCLiTOM',
-    appId: '1:613417430493:ios:0ba64f144a28cc50bc5a34',
-    messagingSenderId: '613417430493',
-    projectId: 'cavalo-trucado-prod',
-    storageBucket: 'cavalo-trucado-prod.appspot.com',
-    iosClientId: '613417430493-e2sp7ki713c7neh339gfd7lcesej4ber.apps.googleusercontent.com',
-    iosBundleId: 'dev.johanguse.cavaloTrucado',
+    apiKey: Env.firebaseIosApiKey,
+    appId: Env.firebaseIosAppId,
+    messagingSenderId: Env.firebaseMessagingSenderId,
+    projectId: Env.firebaseProjectId,
+    storageBucket: Env.firebaseStorageBucket,
+    iosClientId: Env.firebaseIosClientId,
+    iosBundleId: Env.firebaseIosBundleId,
   );
 }
