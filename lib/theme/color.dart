@@ -9,6 +9,7 @@ class AppColor {
   static const pageColor = Color(0xFFFCFCFC);
   static const colorButtonWpp = Color(0xFF1FAF38);
   static const colorShadow = Color.fromARGB(82, 73, 73, 73);
+  static const borderRedTransparent = Color.fromARGB(130, 192, 0, 0);
 
   static const listColors = [
     primary,

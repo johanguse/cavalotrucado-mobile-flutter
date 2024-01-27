@@ -15,12 +15,14 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  int _selectedIndex = -1;
   @override
   void initState() {
     super.initState();
     final modelName = widget.data.vehicleModelName.toString();
     final brand = widget.data.brand;
-    AnalyticsService.observer.analytics.setCurrentScreen(screenName: '$modelName $brand - Detail');
+    AnalyticsService.observer.analytics
+        .setCurrentScreen(screenName: '$modelName $brand - Detail');
   }
 
   String imageMainPhoto = "";
@@ -73,6 +75,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     return GestureDetector(
                       onTap: () {
                         setState(() {
+                          _selectedIndex = index;
                           imageMainPhoto =
                               widget.data.photos[index].url.toString();
                         });
@@ -80,20 +83,26 @@ class _DetailScreenState extends State<DetailScreen> {
                       child: Card(
                         elevation: 0,
                         shape: const RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(10)),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
                         child: Center(
                           child: Container(
                             width: 88,
                             height: 90,
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(widget
-                                        .data.photos[index].url
-                                        .toString()))),
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(widget
+                                      .data.photos[index].url
+                                      .toString())),
+                              border: _selectedIndex == index
+                                  ? Border.all(
+                                      color: AppColor.borderRedTransparent,
+                                      width: 2.0,
+                                    )
+                                  : null,
+                            ),
                           ),
                         ),
                       ),
@@ -119,8 +128,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         children: [
                           Text(
                             "${widget.data.brand}    ",
-                            style:
-                                const TextStyle(fontSize: 22, fontFamily: 'Poppins'),
+                            style: const TextStyle(
+                                fontSize: 22, fontFamily: 'Poppins'),
                           ),
                           Text(
                             widget.data.vehicleModelName.toString(),
@@ -136,7 +145,8 @@ class _DetailScreenState extends State<DetailScreen> {
                       padding: const EdgeInsets.fromLTRB(10, 0, 0, 3),
                       child: Text(
                         "R\$ ${widget.data.vehiclePrice}",
-                        style: const TextStyle(fontSize: 18, fontFamily: 'Poppins'),
+                        style: const TextStyle(
+                            fontSize: 18, fontFamily: 'Poppins'),
                       ),
                     ),
                     Padding(
@@ -236,8 +246,8 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
             ),
             const Padding(
-                padding: EdgeInsets.fromLTRB(20,0,0,0),
-                child:  Text(
+                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Text(
                   "Vendidos",
                   style: TextStyle(
                     fontSize: 22,
